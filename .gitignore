@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data
+aerial_dataset_resized/
+aerial_dataset_resized.zip
+
+.DS_Store
