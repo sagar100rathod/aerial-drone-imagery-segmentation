@@ -1,9 +1,9 @@
 # Aerial Drone Imagery Segmentation with DINO and SegFormer
 
-This repository compares **two semantic segmentation pipelines for aerial drone imagery** trained on the same resized Semantic Drone Dataset split:
+This repository compares **two semantic segmentation pipelines for aerial drone imagery** trained on the same resized dataset split:
 
-1. **DINO + ResNet50 + U-Net decoder**
-2. **SegFormer-B3**
+1. **DINO + ResNet50 + U-Net decoder** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sagar100rathod/aerial-drone-imagery-segmentation/blob/main/Aerial_View_Segmentation_with_DINO.ipynb)
+2. **SegFormer-B3** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sagar100rathod/aerial-drone-imagery-segmentation/blob/main/Aerial_View_Segmentation_with_Segformer.ipynb)
 
 The goal is to study how a **self-supervised CNN backbone with a custom decoder** compares against a **transformer-based segmentation model** on dense urban-scene understanding from bird's-eye-view images.
 
@@ -23,6 +23,8 @@ The repo contains two end-to-end notebooks that:
 Both experiments target **24 semantic classes** from the Semantic Drone Dataset, including categories such as paved-area, dirt, grass, vegetation, roof, wall, person, car, bicycle, tree, obstacle, and more.
 
 ## Dataset
+
+You can find more details about the training dataset [here](https://ivc.tugraz.at/research-project/semantic-drone-dataset/).
 
 The experiments use a resized version of the **Semantic Drone Dataset** from TU Graz.
 
@@ -114,23 +116,6 @@ Both models perform strongly on the resized aerial dataset, with **validation mI
 - **SegFormer-B3** delivers the best overall validation score
 - **DINO + U-Net** remains highly competitive while using slightly fewer parameters
 - the gap is **small**, suggesting both architectures are viable for aerial semantic segmentation under this training setup
-
-From an ML research perspective, this is a useful comparison because it contrasts:
-
-- **self-supervised representation learning + CNN decoder design**
-- versus
-- **modern transformer-based segmentation**
-
-## Repository contents
-
-```text
-.
-├── Aerial_View_Segmentation_with_DINO.ipynb
-├── Aerial_View_Segmentation_with_Segformer.ipynb
-├── aerial_dataset_resized/
-├── aerial_dataset_resized.zip
-└── README.md
-```
 
 ## How to use
 
